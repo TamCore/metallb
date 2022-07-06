@@ -101,7 +101,7 @@ In the following example, we are deploying MetalLB with the native bgp implement
 namespace: metallb-system
 
 resources:
-  - github.com/metallb/metallb/config/native?ref=0.13.0
+  - github.com/metallb/metallb/config/native?ref=v0.13.2
 ```
 
 In order to deploy the [experimental FRR mode](https://metallb.universe.tf/configuration/#enabling-bfd-support-for-bgp-sessions):
@@ -111,7 +111,7 @@ In order to deploy the [experimental FRR mode](https://metallb.universe.tf/confi
 namespace: metallb-system
 
 resources:
-  - github.com/metallb/metallb/config/frr?ref=main
+  - github.com/metallb/metallb/config/frr?ref=v0.13.2
 ```
 
 ## Installation with Helm
@@ -174,6 +174,8 @@ and change the `BGP_TYPE` environment variable of the `manager` container to `fr
 - name: METALLB_BGP_TYPE
   value: frr
 ```
+
+{{% /notice %}}
 
 ## FRR daemons logging level
 
